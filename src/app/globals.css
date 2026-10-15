@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Neutral defaults; an event page overrides these with its own theme (core/theme/theme.ts). */
+:root {
+  color-scheme: light;
+  --ev-bg: #faf8f5;
+  --ev-fg: #1c1b1a;
+  --ev-muted: #6b6863;
+  --ev-card: #ffffff;
+  --ev-line: #e7e3dc;
+  --ev-accent: #1c1b1a;
+  --ev-accent-fg: #ffffff;
+  --ev-font: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-ev-bg: var(--ev-bg);
+  --color-ev-fg: var(--ev-fg);
+  --color-ev-muted: var(--ev-muted);
+  --color-ev-card: var(--ev-card);
+  --color-ev-line: var(--ev-line);
+  --color-ev-accent: var(--ev-accent);
+  --color-ev-accent-fg: var(--ev-accent-fg);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-ev: var(--ev-font);
+}
+
+body {
+  background: var(--ev-bg);
+  color: var(--ev-fg);
+  font-family: var(--ev-font);
+}
